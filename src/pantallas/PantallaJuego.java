@@ -81,17 +81,15 @@ public class PantallaJuego implements Pantalla {
 			fondoJuego2 = new Sprite(0 - panelJuego.getWidth(), 0, panelJuego.getWidth(), panelJuego.getHeight(), 3, 0,
 					imagenFondoJuego, true);
 			// Personaje
-			personaje = new Sprite(0, panelJuego.getHeight() - ALTURA_SUELO_PERSONAJE, 80, 80, 9, 0, imagenPersonaje,
-					true);
+			personaje = new Sprite(0, panelJuego.getHeight() - ALTURA_SUELO_PERSONAJE, 80, 80, 9, 0, imagenPersonaje,true);
 			enSuelo = true;
 			// Orco
-			orco.add(
-					new Sprite(1500, panelJuego.getHeight() - ALTURA_SUELO_ORCO, 80, 80, velOrco, 0, imagenOrco, true));
+			orco.add(new Sprite(1500, panelJuego.getHeight() - ALTURA_SUELO_ORCO, 80, 80, velOrco, 0, imagenOrco, true));
 
 			// Meta
 			meta = new Sprite(1298, 360, 120, 120, 0, 0, imagenMeta, true);
 			// Generar Niveles
-			generadorDeNivel = (int) (Math.random() * 4 + 1);
+			generadorDeNivel = (int) (Math.random() * 6 + 2);
 			// Inicializar sonidos
 			sonidoInicial();
 			sonidoChoque();
@@ -148,10 +146,8 @@ public class PantallaJuego implements Pantalla {
 	private void generarOrco() {
 
 		for (int i = 0; i < orco.size(); i++) {
-			if ((orco.get(i).getPosX() < panelJuego.getWidth() / 2) && (orco.size() <= 1)
-					&& (personaje.getPosX() <= 1350)) {
-				orco.add(new Sprite(panelJuego.getWidth(), panelJuego.getHeight() - ALTURA_SUELO_ORCO, 80, 80, velOrco,
-						0, imagenOrco, true));
+			if ((orco.get(i).getPosX() < panelJuego.getWidth() / 2) && (orco.size() <= 1)) {
+				orco.add(new Sprite(panelJuego.getWidth(), panelJuego.getHeight() - ALTURA_SUELO_ORCO, 80, 80, velOrco,0, imagenOrco, true));
 			}
 		}
 
