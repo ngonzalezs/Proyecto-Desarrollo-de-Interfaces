@@ -148,8 +148,8 @@ public class Sprite {
 					(otro.posX+otro.ancho >=posX);
 				
 		boolean colisionY = posY < otro.posY ? 
-				(posY+alto >= otro.posY) : 
-					(otro.posY+otro.alto >=posY);
+				(posY+alto >= otro.posY+20) : 
+					(otro.posY+otro.alto >=posY+20);
 		
 		return colisionX && colisionY;
 	}
