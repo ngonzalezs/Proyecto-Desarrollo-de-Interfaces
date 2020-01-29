@@ -89,7 +89,7 @@ public class PantallaJuego implements Pantalla {
 			// Meta
 			meta = new Sprite(1298, 360, 120, 120, 0, 0, imagenMeta, true);
 			// Generar Niveles
-			generadorDeNivel = (int) (Math.random() * 6 + 2);
+			generadorDeNivel = (int) (Math.random() * 5 + 2);
 			// Inicializar sonidos
 			sonidoInicial();
 			sonidoChoque();

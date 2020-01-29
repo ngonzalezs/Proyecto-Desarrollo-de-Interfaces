@@ -43,7 +43,6 @@ public class PantallaGanadora implements Pantalla{
 			e.printStackTrace();
 		}
 		redimensionar();
-		System.out.println(333);
 	}
 
 	@Override
